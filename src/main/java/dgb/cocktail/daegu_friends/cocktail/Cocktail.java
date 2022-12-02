@@ -1,4 +1,4 @@
-package dgb.cocktail.daegu_friends.store;
+package dgb.cocktail.daegu_friends.cocktail;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,21 +9,20 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Entity
 //@Table(name="store")
-public class Store {
+public class Cocktail {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String title;
-    private String storeInfo;
-    private double lat;
-    private double lon;
+    private String cocktailName;
+    private String desc;
     private String image;
 
-    public Store(){}
+    public Cocktail(){}
 
     @Builder
-    public Store(String title, String storeInfo){
+    public Cocktail(String title, String cocktailName){
         this.title = title;
-        this.storeInfo = storeInfo;
+        this.cocktailName = cocktailName;
     }
 }
