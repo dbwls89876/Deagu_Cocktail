@@ -5,6 +5,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @Slf4j
 @RestController
 public class CocktailController {
@@ -12,7 +14,7 @@ public class CocktailController {
     CocktailService cocktailService;
 
     @GetMapping("/cocktail")
-    public Cocktail fineCocktail(Cocktail cocktail){
+    public List<Cocktail> findCocktailList(Cocktail cocktail){
         return cocktailService.findCocktail(cocktail);
     }
 }

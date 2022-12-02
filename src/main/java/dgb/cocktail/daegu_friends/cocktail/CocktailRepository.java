@@ -9,6 +9,6 @@ import java.util.Optional;
 
 @Repository
 public interface CocktailRepository extends JpaRepository<Cocktail, Long>{
-    Cocktail findByTitle(String title);
+    List<Cocktail> findByTitle(String title);
     List<Cocktail> findAll();
 }
